@@ -1,0 +1,25 @@
+// Миксин для шрифта (размер шрифта, жирность, line-height, letter-spacing)
+
+@mixin main-font($font-size, $font-weight, $line-height) {
+  font-family: $main-font;
+  font-style: normal;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height / $font-size;
+  color: $main-text-color;
+}
+
+@mixin accent-font(
+  $font-size,
+  $font-weight,
+  $line-height,
+  $letter-spacing: -0.01em
+) {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height / $font-size;
+  letter-spacing: $letter-spacing;
+  color: $secondary-text-color;
+}

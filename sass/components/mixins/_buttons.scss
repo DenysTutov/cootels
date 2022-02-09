@@ -1,0 +1,55 @@
+@mixin button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin main-button {
+  @include button;
+  align-items: center;
+
+  height: 51px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 4px;
+  border: 1px solid $accent-button-bg-color;
+
+  background-color: $accent-button-bg-color;
+
+  @include main-font(16px, 500, 19px);
+  color: $accent-button-text-color;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $accent-button-bg-color;
+    border: 1px solid $accent-button-bg-color;
+  }
+}
+
+@mixin main-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 47px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 4px;
+  border: 1px solid $accent-button-bg-color;
+
+  background-color: $accent-button-bg-color;
+
+  @include main-font(16px, 500, 19px);
+  color: $accent-button-text-color;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $accent-button-bg-color;
+    border: 1px solid $accent-button-bg-color;
+  }
+}

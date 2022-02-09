@@ -1,0 +1,77 @@
+.reservation__title-thumb {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 88px;
+}
+
+.reservation__title {
+  @include accent-font(36px, 600, 54px);
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  width: 590px;
+  @include main-font(18px, 400, 27px);
+  text-align: center;
+
+  margin-bottom: 32px;
+}
+
+.reservation__button {
+  @include main-button;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-reservation__list {
+  display: flex;
+}
+
+.card-reservation__item {
+  width: calc((100% - 48px) / 3);
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.card-reservation__img {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 32px;
+}
+
+.card-reservation__title {
+  @include accent-font(24px, 600, 36px);
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.card-reservation__text {
+  @include main-font(18px, 400, 27px);
+  margin-bottom: 32px;
+}
+
+.card-reservation__link {
+  display: flex;
+  align-items: center;
+  @include main-font(18px, 400, 27px);
+  color: #424f7b;
+
+  &::after {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/reservation/Arrow_Right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-left: 12px;
+  }
+}
