@@ -305,13 +305,11 @@ body {
   margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
-  outline: 1px solid red;
 }
 
 .section {
   padding-top: 80px;
   padding-bottom: 80px;
-  outline: 1px solid green;
 }
 
 .main-nav {
@@ -881,37 +879,27 @@ body {
   border: 1px solid #0e1734;
 }
 
-.room-ocordeon {
+.room-accordeon {
   width: 588px;
-  margin-left: auto;
 }
 
-.room-ocordeon__item {
-  width: 100%;
+.room-accordeon__item {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100px;
-  padding-left: 36px;
+  background-color: #fff;
   -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
 }
 
-.room-ocordeon__item:not(:last-child) {
+.room-accordeon__item:not(:last-child) {
   margin-bottom: 24px;
 }
 
-.room-ocordeon__title {
+.room-accordeon__title {
+  position: relative;
   display: block;
-  width: 588px;
+  width: 100%;
+  padding: 32px 36px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-size: 24px;
@@ -920,51 +908,16 @@ body {
   letter-spacing: -0.01em;
   color: #192252;
   color: #424f7b;
-  height: 100%;
-}
-
-.room-ocordeon__button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
   cursor: pointer;
-  position: absolute;
-  right: 36px;
-  top: 30px;
-  width: 40px;
-  height: 40px;
-  background-color: #ffece2;
-  border-radius: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.room-ocordeon__button:hover, .room-ocordeon__button:focus {
-  background-color: #ff620a;
+.room-accordeon__input:checked .room-accordeon__title {
+  padding: 32px 36px 24px;
 }
 
-.room-ocordeon__svg {
-  stroke: #ff620a;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.room-ocordeon__button:hover .room-ocordeon__svg,
-.room-ocordeon__button:focus .room-ocordeon__svg {
-  stroke: #fff;
-}
-
-.room-ocordeon__text {
-  width: 588px;
+.room-accordeon__text {
   display: none;
+  padding: 0 36px 32px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -973,22 +926,47 @@ body {
   color: #848fac;
 }
 
-.room-ocordeon__text.inner {
-  overflow: hidden;
-  display: none;
-}
-
-.room-ocordeon__text.inner.show {
+.room-accordeon__input:checked ~ .room-accordeon__text {
   display: block;
 }
 
-li {
-  margin: 0.5em 0;
+.room-accordeon__svg {
+  stroke: #ff620a;
 }
 
-li a.toggle {
-  width: 100%;
-  display: block;
+.room-accordeon__input:checked ~ .room-accordeon__title .room-accordeon__svg {
+  stroke: #fff;
+}
+
+.room-accordeon__svg--thumb {
+  position: absolute;
+  right: 36px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffece2;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.room-accordeon__input:checked ~ .room-accordeon__title .room-accordeon__svg--thumb {
+  -webkit-transform: translateY(-50%) rotate(0);
+          transform: translateY(-50%) rotate(0);
+  background-color: #ff620a;
 }
 
 .page-footer {

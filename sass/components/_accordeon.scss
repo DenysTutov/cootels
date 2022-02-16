@@ -1,0 +1,71 @@
+.room-accordeon {
+  width: 588px;
+}
+
+.room-accordeon__item {
+  position: relative;
+
+  background-color: #fff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.room-accordeon__title {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 32px 36px;
+
+  @include accent-font(24px, 600, 36px);
+  color: #424f7b;
+  cursor: pointer;
+
+  .room-accordeon__input:checked & {
+    padding: 32px 36px 24px;
+  }
+}
+
+.room-accordeon__text {
+  display: none;
+  padding: 0 36px 32px;
+  @include main-font(18px, 400, 27px);
+
+  .room-accordeon__input:checked ~ & {
+    display: block;
+  }
+}
+
+.room-accordeon__svg {
+  stroke: #ff620a;
+  .room-accordeon__input:checked ~ .room-accordeon__title & {
+    stroke: #fff;
+  }
+  // transform: rotate(180deg);
+
+  &--thumb {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: #ffece2;
+    border-radius: 50%;
+    transition: transform 250ms $bezier-timing;
+
+    .room-accordeon__input:checked ~ .room-accordeon__title & {
+      transform: translateY(-50%) rotate(0);
+      background-color: #ff620a;
+    }
+  }
+}

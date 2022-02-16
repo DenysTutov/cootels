@@ -216,79 +216,105 @@
             </button>
           </div>
 
-          <ul class="room-accordeon accordion">
-            <li class="room-ocordeon__item">
-              <h3 class="room-ocordeon__title toggle">
-                1. Choose a room and date
-              </h3>
-              <p class="room-ocordeon__text inner">
+          <ul class="room-accordeon">
+            <li class="room-accordeon__item">
+              <input
+                class="room-accordeon__input visually-hidden"
+                type="radio"
+                name="accordeon"
+                id="accordeon1"
+                checked
+              />
+              <label class="room-accordeon__title" for="accordeon1"
+                >1. Choose a room and date
+                <div class="room-accordeon__svg--thumb">
+                  <svg
+                    class="room-accordeon__svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m5 15.5 7-7 7 7"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </label>
+
+              <div class="room-accordeon__text">
                 Contact us via phone or email, ask for availability of you
                 choice of room. We might offer you something exciting.
-              </p>
-              <!-- <button type="button" class="room-ocordeon__button">
-                <svg
-                  class="room-ocordeon__svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m5 15.5 7-7 7 7"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button> -->
+              </div>
             </li>
-            <li class="room-ocordeon__item">
-              <h3 class="room-ocordeon__title">
-                2. Check for room availability
-              </h3>
-              <button type="button" class="room-ocordeon__button">
-                <svg
-                  class="room-ocordeon__svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m5 15.5 7-7 7 7"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <p class="room-ocordeon__text">
+
+            <li class="room-accordeon__item">
+              <input
+                class="room-accordeon__input visually-hidden"
+                type="radio"
+                name="accordeon"
+                id="accordeon2"
+              />
+              <label class="room-accordeon__title" for="accordeon2"
+                >2. Check for room availability
+                <div class="room-accordeon__svg--thumb">
+                  <svg
+                    class="room-accordeon__svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m5 15.5 7-7 7 7"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </label>
+
+              <div class="room-accordeon__text">
                 Contact us via phone or email, ask for availability of you
                 choice of room. We might offer you something exciting.
-              </p>
+              </div>
             </li>
-            <li class="room-ocordeon__item">
-              <h3 class="room-ocordeon__title">3. Enjoy your room</h3>
-              <button type="button" class="room-ocordeon__button">
-                <svg
-                  class="room-ocordeon__svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m5 15.5 7-7 7 7"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <p class="room-ocordeon__text">
+
+            <li class="room-accordeon__item">
+              <input
+                class="room-accordeon__input visually-hidden"
+                type="radio"
+                name="accordeon"
+                id="accordeon3"
+              />
+              <label class="room-accordeon__title" for="accordeon3"
+                >3. Enjoy your room
+                <div class="room-accordeon__svg--thumb">
+                  <svg
+                    class="room-accordeon__svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m5 15.5 7-7 7 7"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </label>
+
+              <div class="room-accordeon__text">
                 Contact us via phone or email, ask for availability of you
                 choice of room. We might offer you something exciting.
-              </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -376,8 +402,5 @@
         </ul>
       </div>
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="./js/accordeon.js"></script>
   </body>
 </html>
