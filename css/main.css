@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -967,6 +968,141 @@ body {
   -webkit-transform: translateY(-50%) rotate(0);
           transform: translateY(-50%) rotate(0);
   background-color: #ff620a;
+}
+
+.customers__title {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #192252;
+  margin-bottom: 62px;
+  text-align: center;
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
+/* Стили кастомного слайдера */
+.customers-slider {
+  padding: 0 100px;
+  min-width: 0;
+  position: relative;
+  /* Точки (булиты) */
+  /* Активная точка */
+  /* Элемент точки */
+}
+
+.customers-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+
+.customers-slider .slick-arrow.slick-prev {
+  left: 0;
+}
+
+.customers-slider .slick-arrow.slick-next {
+  right: 0;
+}
+
+.customers-slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customers-slider .slick-dots li {
+  list-style: none;
+}
+
+.customers-slider .slick-dots li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.customers-slider .slick-dots li.slick-active button {
+  width: 12px;
+  height: 12px;
+  background-color: #fab047;
+}
+
+.customers-slider .slick-dots li button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fde4bf;
+}
+
+.customers-slider__img {
+  display: block;
+  margin: 0 auto 44px;
+}
+
+.customers-slider__review {
+  width: 800px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #848fac;
+  text-align: center;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+}
+
+.customers-slider__name {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #848fac;
+  color: #192252;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .page-footer {

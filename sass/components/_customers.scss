@@ -1,0 +1,12 @@
+.customers {
+  // &--container {
+  //   padding-left: 200px;
+  //   padding-right: 200px;
+  // }
+}
+
+.customers__title {
+  @include accent-font(36px, 600, 54px);
+  margin-bottom: 62px;
+  text-align: center;
+}
