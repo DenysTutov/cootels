@@ -1,0 +1,22 @@
+.scrollup {
+  width: 60px;
+  height: 60px;
+  opacity: 0.2;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  text-indent: -9999px;
+  background-image: url(../../images/scrollup.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  background-color: #000;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+body.modal-open .scrollup {
+  opacity: 0;
+}
+/*# sourceMappingURL=scrollup.css.map */

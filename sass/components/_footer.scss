@@ -5,5 +5,82 @@
 
   &--flex {
     display: flex;
+    justify-content: space-between;
   }
+}
+
+.logo {
+  &--white {
+    color: $footer-main-text-color;
+  }
+
+  &--margin {
+    margin-bottom: 13px;
+  }
+}
+
+.page-footer__label {
+  width: 190px;
+  margin-bottom: 36px;
+
+  @include main-font(16px, 400, 28px);
+  color: $footer-secondary-text-color;
+}
+
+//Socials link
+.social-link__list {
+  display: flex;
+}
+
+.social-link__item {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.social-link__icon {
+  width: 32px;
+  height: 32px;
+  fill: $footer-main-text-color;
+
+  .social-link__link:hover & {
+    fill: $accent-color;
+  }
+}
+
+//Footer navigation
+.page-footer__nav-thumb {
+  display: flex;
+}
+
+.page-footer__nav-list {
+  &:not(:last-child) {
+    margin-right: 130px;
+  }
+}
+
+.page-footer__nav-title {
+  @include main-font(16px, 700, 19px);
+  letter-spacing: 0.01em;
+  color: $footer-main-text-color;
+}
+
+.page-footer__nav-item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.page-footer__nav-link {
+  @include main-font(16px, 400, 19px);
+  color: $footer-secondary-text-color;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.page-footer__nav-text {
+  @include main-font(16px, 400, 19px);
+  color: $footer-secondary-text-color;
 }

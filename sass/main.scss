@@ -1,3 +1,4 @@
+// Utils and mixins
 @import "./utils/variables";
 @import "./components/mixins/fonts";
 @import "./components/mixins/buttons";
@@ -6,10 +7,12 @@
 @import "./base/reset";
 @import "./utils/visually-hidden";
 
+// Base
 @import "./base/base";
 @import "./utils/container";
 @import "./utils/section";
 
+// Components
 @import "./components/header";
 @import "./components/hero-section";
 @import "./components/about-us-section";
@@ -20,3 +23,6 @@
 @import "./components/customers";
 @import "./components/customers-slider";
 @import "./components/footer";
+
+// Scroll Up
+@import "./components/scrollup";

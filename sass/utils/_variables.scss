@@ -1,18 +1,26 @@
+//Text colors
 $main-text-color: #848fac;
 $secondary-text-color: #192252;
+$accent-color: #fab047;
+$main-accent-color: #ff620a;
 
+//Background color section
+$backgrond-color: #f5f4fa;
+
+//Fotter colors
 $bg-footer: #0b265a;
-
-// Cubic-bezier
-$bezier-timing: cubic-bezier(0.4, 0, 0.2, 1);
+$footer-main-text-color: #fff;
+$footer-secondary-text-color: #d9dbde;
+$footer-hover: #848fac;
 
 // Fonts
 $main-font: "Inter", sans-serif;
 $secondary-font: "Montserrat", sans-serif;
 
 //Buttons
-$accent-button-bg-color: #0e1734;
-$accent-button-text-color: #fff;
+$button-bg-color: #0e1734;
+$button-text-color: #fff;
+$main-accent-button-bg-color: #ff620a;
 
-//Background color
-$backgrond-color: #f5f4fa;
+// Cubic-bezier
+$bezier-timing: cubic-bezier(0.4, 0, 0.2, 1);

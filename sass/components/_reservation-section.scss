@@ -73,5 +73,14 @@
     background-size: contain;
     background-position: center;
     margin-left: 12px;
+    transform: translateX(0);
+    transition: transform 250ms $bezier-timing;
+  }
+
+  &:hover {
+    color: $accent-color;
+    &::after {
+      transform: translateX(10px);
+    }
   }
 }

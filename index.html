@@ -19,17 +19,17 @@
     <!-- Header -->
     <header class="page-header">
       <div class="container">
-        <nav class="main-nav">
-          <a class="page-header__logo" href="#">Cootels</a>
+        <nav class="main-nav scrollto">
+          <a class="logo" href="#">Cootels</a>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="" class="main-nav__link">Rooms</a>
+              <a href="#room" class="main-nav__link">Rooms</a>
             </li>
             <li class="main-nav__item">
               <a href="#reservation" class="main-nav__link">Reservation</a>
             </li>
             <li class="main-nav__item">
-              <a href="" class="main-nav__link">Contacs</a>
+              <a href="#footer" class="main-nav__link">Contacs</a>
             </li>
           </ul>
           <button type="button" class="main-nav__button">Get Started</button>
@@ -201,7 +201,7 @@
         </div>
       </section>
 
-      <section class="room section">
+      <section class="room section" id="room">
         <div class="container room--flex">
           <div class="room__content-thumb">
             <p class="room__label">Start your journey!</p>
@@ -210,10 +210,10 @@
               You can contact us by phone or email us. Easily tap the contact
               button below and it will take you to our contact point
             </p>
-            <button class="room__button">Contact us</button>
-            <button class="room__button room__button--no-bg">
-              Explore more room
+            <button class="room__button room__button--margin">
+              Contact us
             </button>
+            <button class="room__button">Explore more room</button>
           </div>
 
           <ul class="room-accordeon">
@@ -327,7 +327,7 @@
             <li class="customers-slider__item">
               <img
                 class="customers-slider__img"
-                src="./images/сustomers/customers1.png"
+                src="./images/сustomers/customers01.jpg"
                 alt="Girl customers"
                 width="120"
               />
@@ -342,7 +342,7 @@
             <li class="customers-slider__item">
               <img
                 class="customers-slider__img"
-                src="./images/сustomers/customers1.png"
+                src="./images/сustomers/customers02.jpg"
                 alt="Girl customers"
                 width="120"
               />
@@ -355,7 +355,7 @@
             <li class="customers-slider__item">
               <img
                 class="customers-slider__img"
-                src="./images/сustomers/customers1.png"
+                src="./images/сustomers/customers03.jpg"
                 alt="Girl customers"
                 width="120"
               />
@@ -370,7 +370,7 @@
             <li class="customers-slider__item">
               <img
                 class="customers-slider__img"
-                src="./images/сustomers/customers1.png"
+                src="./images/сustomers/customers04.jpg"
                 alt="Girl customers"
                 width="120"
               />
@@ -385,7 +385,7 @@
             <li class="customers-slider__item">
               <img
                 class="customers-slider__img"
-                src="./images/сustomers/customers1.png"
+                src="./images/сustomers/customers05.jpg"
                 alt="Girl customers"
                 width="120"
               />
@@ -403,45 +403,110 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer">
+    <footer class="page-footer" id="footer">
       <div class="container page-footer--flex">
         <div>
-          <a href="">Cootels</a>
-          <p>Your Best Private Hideway From Crowd. Back to Nature.</p>
-          <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+          <a class="logo logo--white logo--margin" href="#">Cootels</a>
+          <p class="page-footer__label">
+            Your Best Private Hideway From Crowd. Back to Nature.
+          </p>
+
+          <ul class="social-link__list">
+            <li class="social-link__item">
+              <a class="social-link__link" href="#">
+                <svg class="social-link__icon">
+                  <use href="./images/footer-sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link__item">
+              <a class="social-link__link" href="#">
+                <svg class="social-link__icon">
+                  <use href="./images/footer-sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-link__item">
+              <a class="social-link__link" href="#">
+                <svg class="social-link__icon">
+                  <use href="./images/footer-sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
 
-        <ul>
-          <li><a href="">Rooms</a></li>
-          <li><a href="">Single Room</a></li>
-          <li><a href="">Double Room</a></li>
-          <li><a href="">Cabin</a></li>
-          <li><a href="">Custom Room</a></li>
-        </ul>
+        <div class="page-footer__nav-thumb">
+          <ul class="page-footer__nav-list">
+            <li class="page-footer__nav-item">
+              <h4 class="page-footer__nav-title">Rooms</h4>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="#">Single Room</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="#">Double Room</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="#">Cabin</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="#">Custom Room</a>
+            </li>
+          </ul>
 
-        <ul>
-          <li><a href="">Reservation</a></li>
-          <li><a href="">See the Steps</a></li>
-          <li><a href="">Best Time</a></li>
-        </ul>
+          <ul class="page-footer__nav-list">
+            <li class="page-footer__nav-item">
+              <h4 class="page-footer__nav-title">Reservation</h4>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="">See the Steps</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a class="page-footer__nav-link" href="">Best Time</a>
+            </li>
+          </ul>
 
-        <ul>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Our Number</a></li>
-          <li><a href="">Our Email</a></li>
-          <li><a href="">Our Location</a></li>
-        </ul>
+          <ul class="page-footer__nav-list">
+            <li class="page-footer__nav-item">
+              <h4 class="page-footer__nav-title">Contact</h4>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="tel:+380951234567" class="page-footer__nav-link"
+                >38 095 123 45 67</a
+              >
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="mailto:info@cootels.com" class="page-footer__nav-link"
+                >info@cootels.com</a
+              >
+            </li>
+            <li class="page-footer__nav-item">
+              <p class="page-footer__nav-text">
+                Kungl. Slottet <br />
+                SE-107 70 Stockholm <br />
+                Sweden
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
 
+    <!-- Scroll Up -->
+    <a href="#" class="scrollup">Наверх</a>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Slider Slick -->
     <script src="./js/slick.min.js"></script>
     <script src="./js/customers-slider.js" type="module"></script>
+
+    <!-- Scroll Up Script -->
+    <script src="./js/scrollup.js" type="module"></script>
+
+    <!-- Scroll To Slow Script -->
+    <script src="./js/scrollto.js" type="module"></script>
   </body>
 </html>

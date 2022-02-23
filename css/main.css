@@ -327,7 +327,8 @@ body {
   height: 120px;
 }
 
-.page-header__logo {
+.logo {
+  display: block;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-size: 32px;
@@ -355,6 +356,12 @@ body {
   line-height: 1.1875;
   color: #848fac;
   color: #192252;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav__link:hover {
+  color: #ff620a;
 }
 
 .main-nav__button {
@@ -373,7 +380,7 @@ body {
   padding-left: 32px;
   padding-right: 32px;
   border-radius: 4px;
-  border: 1px solid #0e1734;
+  border: 1px solid transparent;
   background-color: #0e1734;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -385,9 +392,7 @@ body {
 }
 
 .main-nav__button:hover, .main-nav__button:focus {
-  background-color: transparent;
-  color: #0e1734;
-  border: 1px solid #0e1734;
+  background-color: #ff620a;
 }
 
 .hero--flex {
@@ -695,7 +700,7 @@ body {
   padding-left: 32px;
   padding-right: 32px;
   border-radius: 4px;
-  border: 1px solid #0e1734;
+  border: 1px solid transparent;
   background-color: #0e1734;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -711,9 +716,7 @@ body {
 }
 
 .reservation__button:hover, .reservation__button:focus {
-  background-color: transparent;
-  color: #0e1734;
-  border: 1px solid #0e1734;
+  background-color: #ff620a;
 }
 
 .card-reservation__list {
@@ -785,6 +788,21 @@ body {
   background-size: contain;
   background-position: center;
   margin-left: 12px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-reservation__link:hover {
+  color: #fab047;
+}
+
+.card-reservation__link:hover::after {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
 .room--flex {
@@ -851,7 +869,7 @@ body {
   padding-left: 32px;
   padding-right: 32px;
   border-radius: 4px;
-  border: 1px solid #0e1734;
+  border: 1px solid transparent;
   background-color: #0e1734;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -863,21 +881,11 @@ body {
 }
 
 .room__button:hover, .room__button:focus {
-  background-color: transparent;
-  color: #0e1734;
-  border: 1px solid #0e1734;
+  background-color: #ff620a;
 }
 
-.room__button--no-bg {
-  border: 1px solid transparent;
-  background-color: transparent;
-  color: #0e1734;
-}
-
-.room__button--no-bg:hover, .room__button--no-bg:focus {
-  background-color: transparent;
-  color: #0e1734;
-  border: 1px solid #0e1734;
+.room__button--margin {
+  margin-right: 10px;
 }
 
 .room-accordeon {
@@ -982,6 +990,39 @@ body {
   text-align: center;
 }
 
+.customers-slider__img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 44px;
+}
+
+.customers-slider__review {
+  width: 800px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #848fac;
+  text-align: center;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+}
+
+.customers-slider__name {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #848fac;
+  color: #192252;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 /* Слайдер */
 /* Слайдер запущен */
 /* Слайдер с точками */
@@ -1054,8 +1095,8 @@ body {
 }
 
 .customers-slider .slick-dots li.slick-active button {
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   background-color: #fab047;
 }
 
@@ -1069,40 +1110,10 @@ body {
   background-color: transparent;
   cursor: pointer;
   font-size: 0;
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background-color: #fde4bf;
-}
-
-.customers-slider__img {
-  display: block;
-  margin: 0 auto 44px;
-}
-
-.customers-slider__review {
-  width: 800px;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #848fac;
-  text-align: center;
-  margin: 0 auto 40px;
-  padding: 0 15px;
-}
-
-.customers-slider__name {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #848fac;
-  color: #192252;
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 .page-footer {
@@ -1115,5 +1126,119 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo--white {
+  color: #fff;
+}
+
+.logo--margin {
+  margin-bottom: 13px;
+}
+
+.page-footer__label {
+  width: 190px;
+  margin-bottom: 36px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #848fac;
+  color: #d9dbde;
+}
+
+.social-link__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-link__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.social-link__icon {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+
+.social-link__link:hover .social-link__icon {
+  fill: #fab047;
+}
+
+.page-footer__nav-thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-footer__nav-list:not(:last-child) {
+  margin-right: 130px;
+}
+
+.page-footer__nav-title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1875;
+  color: #848fac;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.page-footer__nav-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.page-footer__nav-link {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1875;
+  color: #848fac;
+  color: #d9dbde;
+}
+
+.page-footer__nav-link:hover {
+  color: #fab047;
+}
+
+.page-footer__nav-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1875;
+  color: #848fac;
+  color: #d9dbde;
+}
+
+.scrollup {
+  width: 60px;
+  height: 60px;
+  opacity: 0.2;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  text-indent: -9999px;
+  background-image: url(../../images/scrollup.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  background-color: #000;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+body.modal-open .scrollup {
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */
